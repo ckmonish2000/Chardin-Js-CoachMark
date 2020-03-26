@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="chardinjs.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="chardinjs.min.js"></script>
+    <title>Document</title>
+    <style>
+    .card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 500px;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+}
+    </style>
+</head>
+<body>
+    
+    
+    <div class="card">
+        <img src="image.jpg" alt="Avatar" style="width:20%; height: 25%;" data-intro="An awesome 18th-century painter, who found beauty in everyday, common things." data-position="right" id="hi">
+        <div class="container">
+          <h4><b>John Doe</b></h4> 
+          <p data-intro="An awesome 18th-century painter, who found beauty in everyday, common things." data-position="bottom">Architect & Engineer</p> 
+        </div>
+      </div>
+ <script>
+    $(document).ready(function(){
+        $('.card').click(function(){
+             $('body').chardinJs('start');
+
+            
+        });
+      
+    });
+    </script>
+
+</body>
+</html>
